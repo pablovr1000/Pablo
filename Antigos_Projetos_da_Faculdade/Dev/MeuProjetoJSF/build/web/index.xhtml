@@ -1,0 +1,67 @@
+<ui:composition template="WEB-INF/template.xhtml"                 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:jsf="http://xmlns.jcp.org/jsf">
+  
+  <ui:define name="title">
+    Página Inicial
+  </ui:define>
+  
+  <ui:define name="top">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Cadastro de Notas</h1>
+        <p>
+          Para cadastrar as notas, digite o Nome do aluno, o RA e a Nota, você podera editar ou excluir se necessário
+        </p>
+      </div>
+    </div>
+  </ui:define>
+  
+  <ui:define name="content">
+    <h:form>
+      <div class="form-group">
+        <label for="nome_aluno">Nome do aluno:</label>
+        <input type="text" id="nome_aluno" placeholder="Entrar com nome do aluno" class="form-control" jsf:value="#{alunoBean.aluno.nome}"/>
+      </div>
+      <div class="form-group">
+        <label for="ra_aluno">RA do aluno:</label>
+        <input type="text" id="ra_aluno" placeholder="RA Aluno" class="form-control" jsf:value="#{alunoBean.aluno.ra}"/>
+      </div>              
+      <div class="form-group">
+        <label for="nota_aluno">Nota do aluno:</label>
+        <input type="number" id="nota_aluno" step="0.1" placeholder="Nota" class="form-control" jsf:value="#{alunoBean.aluno.nota}"/>
+      </div>              
+      <h:outputText value=" "/>
+      <button jsf:action="#{alunoBean.salvarAluno}" type="submit" class="btn btn-success">Adicionar Aluno</button>
+    </h:form>
+    
+    <h:dataTable value="#{alunoBean.alunos}" class="table table-striped" var="aluno" rendered="#{not empty alunoBean.alunos}">
+      <h:column>
+        <f:facet name="header">Nome</f:facet>
+        #{aluno.nome}
+      </h:column>
+      <h:column>
+        <f:facet name="header">RA</f:facet>
+        #{aluno.ra}
+      </h:column>
+      <h:column>
+        <f:facet name="header">Nota</f:facet>
+        #{aluno.nota}
+      </h:column>
+      <h:column>
+        <f:facet name="header">Ações</f:facet>
+        <h:form>
+          <button jsf:action="#{alunoBean.editarAluno(aluno)}" type="submit" class="btn btn-info">Editar</button>
+          <h:outputText value=" "/>              
+          <button jsf:action="#{alunoBean.excluirAluno(aluno.idAluno)}" type="submit" class="btn btn-danger">Excluir</button>                    
+        </h:form>
+      </h:column>
+    </h:dataTable>
+
+  </ui:define>
+  
+</ui:composition>
