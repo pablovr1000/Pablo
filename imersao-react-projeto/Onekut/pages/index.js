@@ -1,10 +1,39 @@
-import styled from 'styled-components'
+import MainGrid from '../src/components/MainGrid'
+import Box from '../src/components/Box'
+import { AlurakutMenu} from '../src/lib/OnekutCommons';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+
+function ProfileSidebar (githubUser) {
+  console.log(githubUser);
+  return (
+    <Box>
+      <img src={`https://github.com/${githubUser}.png`} style={{ borderRadius: '8px' }}/>
+    </Box>
+  )
+}
 
 export default function Home() {
-  return <Title>My page</Title>
+  const githubUser = 'pablovr1000';
+  const pessoasFavoritas = ['rodolfobitu', 'rooneysan', 'gabrielcarioca', '', '', '']
+
+  return (
+    <>
+      <AlurakutMenu />
+      <MainGrid>
+        <div className="profileArea" style={{ gridArea: 'profileArea'}}>
+          <ProfileSidebar githubUser={githubUser} />  
+        </div>
+        <div className="welcomeArea" style={{ gridArea: 'welcomeArea'}}>
+          <Box>
+            Bem vindo
+          </Box>
+        </div>
+        <div className="profileRelactionsArea" style={{ gridArea: 'profileRelactionsArea'}}>
+          <Box>
+            Meus Amigos
+          </Box>
+        </div>
+      </MainGrid>
+    </>
+  )
 }
