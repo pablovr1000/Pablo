@@ -54,6 +54,14 @@ const Box = styled.div`
     border-radius: 10000px;
     background-color: #6F92BB;
   }
+  .atencaoValidacao {
+      font-size: 12px;
+      color:red;
+      font-weight: bold;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: 20px;
+  }
 `; 
 
 export default Box 

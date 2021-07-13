@@ -3,7 +3,7 @@ import MainGrid from '../src/components/MainGrid'
 import Box from '../src/components/Box'
 import { AlurakutMenu, AlurakutProfileSidebarMenuDefault, OrkutNostalgicIconSet } from '../src/lib/OnekutCommons';
 import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function ProfileSidebar(propriedades) {
   return (
@@ -46,7 +46,7 @@ function ProfileRelations(propriedades) {
 export default function Home() {
   
   const usuarioAleatorio = 'pablovr1000';
-  // const [amigos, setAmigos] = useState(null);
+  const [amigos, setAmigos] = useState(null);
   const [comunidades, setComunidades] = React.useState([{
     id: '3278946387443534958346754389654398534',
     title: 'Eu odeio acordar cedo',
@@ -65,39 +65,25 @@ export default function Home() {
     { id: 'marcobrunodev', name: 'marcobrunodev', image: 'https://github.com/marcobrunodev.png', link: 'https://github.com/marcobrunodev' },
   ];
 
-  // const [validarForm, setValidarFrom] = useState(false);
+  const [validarForm, setValidarFrom] = useState(false);
 
-  // useEffect(() => {
-  //   async function getSeguidores(usuario) {
-  //     try {
-  //       const response = await fetch(`https://api.github.com/users/${usuario}/followers`);
-  //       const data = await response.json();
-  //       setAmigos(data);
-  //       return data;    
-  //     } catch (error) {
-  //       return error.message;
-  //     }
-  //   }
-  //   getSeguidores(githubUser);
-  // },[]);
-
-  // function handleCriaComunidade(e) {
-  //   e.preventDefault();
-  //   const dadosDoForm = new FormData(e.target);
-  //   const comunidade = {
-  //     id: new Date().toISOString,
-  //     title: dadosDoForm.get('title'),
-  //     image: dadosDoForm.get('image') ? dadosDoForm.get('image') : `https://picsum.photos/200?${Math.floor(Math.random() * 999)}`,
-  //     link: dadosDoForm.get('link'),
-  //   } 
-  //   if(comunidade.titulo || comunidade.link){
-  //     const comunidadesAtualizadas = [...comunidades, comunidade];
-  //     setComunidades(comunidadesAtualizadas);
-  //     setValidarFrom(false);
-  //   }else{ 
-  //     setValidarFrom(true);
-  //   }
-  // }
+   function handleCriaComunidade(e) {
+    e.preventDefault();
+    const dadosDoForm = new FormData(e.target);
+    const comunidade = {
+      id: new Date().toISOString,
+      title: dadosDoForm.get('title'),
+      image: dadosDoForm.get('image') ? dadosDoForm.get('image') : `https://picsum.photos/200?${Math.floor(Math.random() * 999)}`,
+      link: dadosDoForm.get('link'),
+    } 
+    if(comunidade.titulo || comunidade.link){
+      const comunidadesAtualizadas = [...comunidades, comunidade];
+      setComunidades(comunidadesAtualizadas);
+      setValidarFrom(false);
+    }else{ 
+      setValidarFrom(true);
+    }
+  }
 
   return (
     <>
@@ -116,35 +102,30 @@ export default function Home() {
           </Box>
           <Box>
             <h2 className="subTitle">O que você deseja fazer?</h2>
-            <form onSubmit={function handleCriaComunidade(e) {
-              e.preventDefault();
-              const dadosDoForm = new FormData(e.target);
-
-              const comunidade = {
-                id: new DataCue().toISOString(),
-                title: dadosDoForm.get('title'),
-                image: dadosDoForm.get('image'),
-              }
-
-              const comunidadesAtualizadas = [...comunidades, comunidade]
-              setComunidades(comunidadesAtualizadas)
-            }} >
+            <form onSubmit={handleCriaComunidade}>
               <div>
-                <input
-                  placeholder="Qual vai ser o nome da sua comunidade?"
-                  name="title"
-                  aria-label="Qual vai ser o nome da sua comunidade?"
-                  type="text"
+                <input 
+                placeholder="Qual vai ser o nome da sua comunidade?" 
+                name="title" 
+                aria-label="Qual vai ser o nome da sua comunidade?"
+                type="text"
                 />
               </div>
               <div>
-                <input
-                  placeholder="Coloque uma URL para usarmos de capa"
-                  name="image"
-                  aria-label="Coloque uma URL para usarmos de capa"
+                <input 
+                placeholder="Coloque uma URL para usar de capa ou deixe com a gente :)" 
+                name="image" 
+                aria-label="Coloque uma URL para usar de capa ou deixe com a gente :)"               
                 />
               </div>
-              {/* {validarForm && <p className="atencaoValidacao">Atenção os campos Nome e Link são obrigatórios.</p>} */}
+              <div>
+                <input 
+                placeholder="Insira o link da comunidade" 
+                name="link" 
+                aria-label="Insira o link da comunidade"               
+                />
+              </div>
+              {validarForm && <p className="atencaoValidacao">Atenção os campos Nome da comunidade e Link da comunidade precisam ser preenchidos.</p>}
               <button>
                 Criar comunidade
               </button>
