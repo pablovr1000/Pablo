@@ -26,14 +26,14 @@ function ProfileRelations(propriedades) {
   console.log(propriedades);
   return (
     <ProfileRelationsBoxWrapper>
-      <h2 className="smallTitle">{propriedades.name} ({propriedades.dados.length})</h2>
+      <h2 className="smallTitle">{propriedades.title} ({propriedades.dados.length})</h2>
       <ul>
           {propriedades.dados.slice(0,6).map(itemAtual => {
             return (
               <li key={itemAtual.id}>
                 <a href={itemAtual.link} target="_blank">
                   <img src={itemAtual.image} />
-                  <span>{itemAtual.name}</span>
+                  <span>{itemAtual.title}</span>
                 </a>
               </li>
             )
