@@ -104,7 +104,7 @@ export default function Home() {
             <h2 className="subTitle">O que você deseja fazer?</h2>
             <form onSubmit={handleCriaComunidade}>
               <div>
-                <input 
+                <input
                 placeholder="Nome da comunidade?" 
                 name="title" 
                 aria-label="Nome da comunidade?"
@@ -113,9 +113,9 @@ export default function Home() {
               </div>
               <div>
                 <input 
-                placeholder="Coloque uma URL para usar de capa ou deixe em branco para preenchimento automático!" 
+                placeholder="Coloque uma URL para usar de capa ou deixe em branco para imagem aleatória!" 
                 name="image" 
-                aria-label="Coloque uma URL para usar de capa ou deixe em branco para preenchimento automático!"               
+                aria-label="Coloque uma URL para usar de capa ou deixe em branco para imagem aleatória!"               
                 />
               </div>
               <div>
@@ -133,8 +133,8 @@ export default function Home() {
           </Box>
         </div>
         <div className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea'}}>
-          <ProfileRelations name="Amigos" dados={pessoasFavoritas} />
-          <ProfileRelations name="Comunidades" dados={comunidades} />
+          <ProfileRelations title="Amigos" dados={pessoasFavoritas} />
+          <ProfileRelations title="Comunidades" dados={comunidades} />
         </div>
       </MainGrid>
     </>
