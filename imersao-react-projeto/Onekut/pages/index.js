@@ -3,6 +3,7 @@ import MainGrid from '../src/components/MainGrid'
 import Box from '../src/components/Box'
 import { AlurakutMenu, AlurakutProfileSidebarMenuDefault, OrkutNostalgicIconSet } from '../src/lib/OnekutCommons';
 import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
+// import { useEffect, useState } from 'react';
 
 function ProfileSidebar(propriedades) {
   return (
@@ -21,32 +22,94 @@ function ProfileSidebar(propriedades) {
   )
 }
 
+function ProfileRelations(propriedades) {
+  console.log(propriedades);
+  return (
+    <ProfileRelationsBoxWrapper>
+      <h2 className="smallTitle">{propriedades.name} ({propriedades.dados.length})</h2>
+      <ul>
+          {propriedades.dados.slice(0,6).map(itemAtual => {
+            return (
+              <li key={itemAtual.id}>
+                <a href={itemAtual.link} target="_blank">
+                  <img src={itemAtual.image} />
+                  <span>{itemAtual.name}</span>
+                </a>
+              </li>
+            )
+          })}
+        </ul>
+    </ProfileRelationsBoxWrapper>
+  );
+}
+
 export default function Home() {
   
   const usuarioAleatorio = 'pablovr1000';
+  // const [amigos, setAmigos] = useState(null);
   const [comunidades, setComunidades] = React.useState([{
     id: '3278946387443534958346754389654398534',
     title: 'Eu odeio acordar cedo',
     image: 'https://alurakut.vercel.app/capa-comunidade-01.jpg'
   }]);
   const pessoasFavoritas = [
-    'rodolfobitu',
-    'rooneysan',
-    'gabrielcarioca'
-  ]
+    { id: 'rodolfobitu', name: 'rodolfobitu', image: 'https://github.com/rodolfobitu.png', link: 'https://github.com/rodolfobitu' },
+    { id: 'rooneysan', name: 'rooneysan', image: 'https://github.com/rooneysan.png', link: 'https://github.com/rooneysan' },
+    { id: 'gabrielcarioca', name: 'gabrielcarioca', image: 'https://github.com/gabrielcarioca.png', link: 'https://github.com/gabrielcarioca' },
+    { id: 'omariosouto', name: 'omariosouto', image: 'https://github.com/omariosouto.png', link: 'https://github.com/omariosouto' },
+    { id: 'peas', name: 'peas', image: 'https://github.com/peas.png', link: 'https://github.com/peas' },
+    { id: 'juunegreiros', name: 'juunegreiros', image: 'https://github.com/juunegreiros.png', link: 'https://github.com/juunegreiros' },
+    { id: 'rla4', name: 'rla4', image: 'https://github.com/rla4.png', link: 'https://github.com/rla4' },
+    { id: 'rafaballerini', name: 'rafaballerini', image: 'https://github.com/rafaballerini.png', link: 'https://github.com/rafaballerini' },
+    { id: 'marceloliveira', name: 'marceloliveira', image: 'https://github.com/marceloliveira.png', link: 'https://github.com/marceloliveira' },
+    { id: 'marcobrunodev', name: 'marcobrunodev', image: 'https://github.com/marcobrunodev.png', link: 'https://github.com/marcobrunodev' },
+  ];
+
+  // const [validarForm, setValidarFrom] = useState(false);
+
+  // useEffect(() => {
+  //   async function getSeguidores(usuario) {
+  //     try {
+  //       const response = await fetch(`https://api.github.com/users/${usuario}/followers`);
+  //       const data = await response.json();
+  //       setAmigos(data);
+  //       return data;    
+  //     } catch (error) {
+  //       return error.message;
+  //     }
+  //   }
+  //   getSeguidores(githubUser);
+  // },[]);
+
+  // function handleCriaComunidade(e) {
+  //   e.preventDefault();
+  //   const dadosDoForm = new FormData(e.target);
+  //   const comunidade = {
+  //     id: new Date().toISOString,
+  //     title: dadosDoForm.get('title'),
+  //     image: dadosDoForm.get('image') ? dadosDoForm.get('image') : `https://picsum.photos/200?${Math.floor(Math.random() * 999)}`,
+  //     link: dadosDoForm.get('link'),
+  //   } 
+  //   if(comunidade.titulo || comunidade.link){
+  //     const comunidadesAtualizadas = [...comunidades, comunidade];
+  //     setComunidades(comunidadesAtualizadas);
+  //     setValidarFrom(false);
+  //   }else{ 
+  //     setValidarFrom(true);
+  //   }
+  // }
 
   return (
     <>
-      <AlurakutMenu />
+      <AlurakutMenu githubUser={usuarioAleatorio}></AlurakutMenu>
       <MainGrid>
-        {/* <Box style="grid-area: profileArea;"> */}
         <div className="profileArea" style={{ gridArea: 'profileArea' }}>
           <ProfileSidebar githubUser={usuarioAleatorio} />
         </div>
         <div className="welcomeArea" style={{ gridArea: 'welcomeArea' }}>
           <Box>
             <h1 className="title">
-              Bem vindo(a) 
+              Bem vindo(a), @{usuarioAleatorio}!
             </h1>
 
             <OrkutNostalgicIconSet />
@@ -81,48 +144,16 @@ export default function Home() {
                   aria-label="Coloque uma URL para usarmos de capa"
                 />
               </div>
+              {/* {validarForm && <p className="atencaoValidacao">Atenção os campos Nome e Link são obrigatórios.</p>} */}
               <button>
                 Criar comunidade
               </button>
             </form>
           </Box>
         </div>
-        <div className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea' }}>
-          <ProfileRelationsBoxWrapper>
-            <h2 className="smallTitle">
-              Amigos ({pessoasFavoritas.length})
-            </h2>
-
-            <ul>
-              {pessoasFavoritas.map((itemAtual) => {
-                return (
-                  <li key={itemAtual}>
-                    <a href={`/users/${itemAtual}`}>
-                      <img src={`https://github.com/${itemAtual}.png`} />
-                      <span>{itemAtual}</span>
-                    </a>
-                  </li>
-                )
-              })}
-            </ul>
-          </ProfileRelationsBoxWrapper>
-          <ProfileRelationsBoxWrapper>
-            <h2 className="smallTitle">
-              Comunidades ({comunidades.length})
-            </h2>
-            <ul>
-              {comunidades.map((itemAtual) => {
-                return (
-                  <li key={itemAtual.id}>
-                    <a href={`/users/${itemAtual.title}`}>
-                      <img src={itemAtual.image} />
-                      <span>{itemAtual.title}</span>
-                    </a>
-                  </li>
-                )
-              })}
-            </ul>
-          </ProfileRelationsBoxWrapper>
+        <div className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea'}}>
+          <ProfileRelations name="Amigos" dados={pessoasFavoritas} />
+          <ProfileRelations name="Comunidades" dados={comunidades} />
         </div>
       </MainGrid>
     </>
