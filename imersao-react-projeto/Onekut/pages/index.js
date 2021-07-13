@@ -105,17 +105,17 @@ export default function Home() {
             <form onSubmit={handleCriaComunidade}>
               <div>
                 <input 
-                placeholder="Qual vai ser o nome da sua comunidade?" 
+                placeholder="Nome da comunidade?" 
                 name="title" 
-                aria-label="Qual vai ser o nome da sua comunidade?"
+                aria-label="Nome da comunidade?"
                 type="text"
                 />
               </div>
               <div>
                 <input 
-                placeholder="Coloque uma URL para usar de capa ou deixe com a gente :)" 
+                placeholder="Coloque uma URL para usar de capa ou deixe em branco para preenchimento automático!" 
                 name="image" 
-                aria-label="Coloque uma URL para usar de capa ou deixe com a gente :)"               
+                aria-label="Coloque uma URL para usar de capa ou deixe em branco para preenchimento automático!"               
                 />
               </div>
               <div>
