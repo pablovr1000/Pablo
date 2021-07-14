@@ -3,7 +3,6 @@ import MainGrid from '../src/components/MainGrid'
 import Box from '../src/components/Box'
 import { AlurakutMenu, AlurakutProfileSidebarMenuDefault, OrkutNostalgicIconSet } from '../src/lib/OnekutCommons';
 import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
-import { useEffect, useState } from 'react';
 
 function ProfileSidebar(propriedades) {
   return (
@@ -33,7 +32,28 @@ function ProfileRelations(propriedades) {
               <li key={itemAtual.id}>
                 <a href={itemAtual.link} target="_blank">
                   <img src={itemAtual.image} />
-                  <span>{itemAtual.title}</span>
+                  <span>{itemAtual.name}</span>
+                </a>
+              </li>
+            )
+          })}
+        </ul>
+    </ProfileRelationsBoxWrapper>
+  );
+}
+
+function ProfileRelations2(propriedades) {
+  console.log(propriedades);
+  return (
+    <ProfileRelationsBoxWrapper>
+      <h2 className="smallTitle">{propriedades.title} ({propriedades.dados.length})</h2>
+      <ul>
+          {propriedades.dados.slice(0,6).map(itemAtual => {
+            return (
+              <li key={itemAtual.id}>
+                <a href={itemAtual.html_url} target="_blank">
+                  <img src={itemAtual.avatar_url} />
+                  <span>{itemAtual.login}</span>
                 </a>
               </li>
             )
@@ -46,12 +66,12 @@ function ProfileRelations(propriedades) {
 export default function Home() {
   
   const usuarioAleatorio = 'pablovr1000';
-  const [amigos, setAmigos] = useState(null);
   const [comunidades, setComunidades] = React.useState([{
     id: '3278946387443534958346754389654398534',
-    title: 'Eu odeio acordar cedo',
+    name: 'Eu odeio acordar cedo',
     image: 'https://alurakut.vercel.app/capa-comunidade-01.jpg'
   }]);
+  const [seguidores, setSeguidores] = React.useState([]);
   const pessoasFavoritas = [
     { id: 'rodolfobitu', name: 'rodolfobitu', image: 'https://github.com/rodolfobitu.png', link: 'https://github.com/rodolfobitu' },
     { id: 'rooneysan', name: 'rooneysan', image: 'https://github.com/rooneysan.png', link: 'https://github.com/rooneysan' },
@@ -65,14 +85,14 @@ export default function Home() {
     { id: 'marcobrunodev', name: 'marcobrunodev', image: 'https://github.com/marcobrunodev.png', link: 'https://github.com/marcobrunodev' },
   ];
 
-  const [validarForm, setValidarFrom] = useState(false);
+  const [validarForm, setValidarFrom] = React.useState(false);
 
    function handleCriaComunidade(e) {
     e.preventDefault();
     const dadosDoForm = new FormData(e.target);
     const comunidade = {
       id: new Date().toISOString,
-      title: dadosDoForm.get('title'),
+      name: dadosDoForm.get('name'),
       image: dadosDoForm.get('image') ? dadosDoForm.get('image') : `https://picsum.photos/200?${Math.floor(Math.random() * 999)}`,
       link: dadosDoForm.get('link'),
     } 
@@ -84,6 +104,25 @@ export default function Home() {
       setValidarFrom(true);
     }
   }
+
+
+  
+  React.useEffect(function() {
+    fetch('https://api.github.com/users/peas/followers')
+    .then(function (respostaDoServidor) {
+      return respostaDoServidor.json();
+    })
+    .then(function (respostaCompleta) {
+      setSeguidores(respostaCompleta);
+      console.log(respostaCompleta);
+    })
+  }, [])
+
+
+
+
+//Pegar o array de dados do github
+//Criar um box que vai ter um map, baseado no items do array que iremos pegar no github
 
   return (
     <>
@@ -135,6 +174,7 @@ export default function Home() {
         <div className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea'}}>
           <ProfileRelations title="Amigos" dados={pessoasFavoritas} />
           <ProfileRelations title="Comunidades" dados={comunidades} />
+          <ProfileRelations2 title="Seguidores" dados={seguidores} />
         </div>
       </MainGrid>
     </>
