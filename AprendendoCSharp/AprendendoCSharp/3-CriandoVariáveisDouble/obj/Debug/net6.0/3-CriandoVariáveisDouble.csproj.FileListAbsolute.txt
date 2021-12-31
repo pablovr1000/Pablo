@@ -1,0 +1,15 @@
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\bin\Debug\net6.0\3-CriandoVariáveisDouble.exe
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\bin\Debug\net6.0\3-CriandoVariáveisDouble.deps.json
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\bin\Debug\net6.0\3-CriandoVariáveisDouble.runtimeconfig.json
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\bin\Debug\net6.0\3-CriandoVariáveisDouble.dll
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\bin\Debug\net6.0\ref\3-CriandoVariáveisDouble.dll
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\bin\Debug\net6.0\3-CriandoVariáveisDouble.pdb
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\obj\Debug\net6.0\3-CriandoVariáveisDouble.csproj.AssemblyReference.cache
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\obj\Debug\net6.0\3-CriandoVariáveisDouble.GeneratedMSBuildEditorConfig.editorconfig
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\obj\Debug\net6.0\3-CriandoVariáveisDouble.AssemblyInfoInputs.cache
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\obj\Debug\net6.0\3-CriandoVariáveisDouble.AssemblyInfo.cs
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\obj\Debug\net6.0\3-CriandoVariáveisDouble.csproj.CoreCompileInputs.cache
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\obj\Debug\net6.0\3-CriandoVariáveisDouble.dll
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\obj\Debug\net6.0\ref\3-CriandoVariáveisDouble.dll
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\obj\Debug\net6.0\3-CriandoVariáveisDouble.pdb
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\3-CriandoVariáveisDouble\obj\Debug\net6.0\3-CriandoVariáveisDouble.genruntimeconfig.cache
