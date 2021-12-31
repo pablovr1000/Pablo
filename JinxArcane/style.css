@@ -1,0 +1,33 @@
+.words {
+  background-color: #000;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p{
+  background-image: url(img/jinx.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  -webkit-animation-clip: text;
+  font-size: 12px;
+  line-height: 0.8;
+  height: 100vh;
+  word-break: break-all;
+  font-family: Calibri;
+  font-weight: bold;
+}
+
+img{
+  position: absolute;
+  top: 175px;
+  right: 45px;
+  transform: rotate(270deg);
+  max-width: 48%;
+  height: auto;
+}

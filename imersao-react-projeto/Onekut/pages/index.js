@@ -22,7 +22,6 @@ function ProfileSidebar(propriedades) {
 }
 
 function ProfileRelations(propriedades) {
-  console.log(propriedades);
   return (
     <ProfileRelationsBoxWrapper>
       <h2 className="smallTitle">{propriedades.title} ({propriedades.dados.length})</h2>
@@ -43,7 +42,6 @@ function ProfileRelations(propriedades) {
 }
 
 function ProfileRelations2(propriedades) {
-  console.log(propriedades);
   return (
     <ProfileRelationsBoxWrapper>
       <h2 className="smallTitle">{propriedades.title} ({propriedades.dados.length})</h2>
