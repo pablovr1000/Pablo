@@ -9,7 +9,7 @@ public class Program
     {
         Console.WriteLine("ola novo teste");
 
-        int idade = 37;
+        int idade = 27;
 
         Console.WriteLine("a idade é " + idade + ", parabéns!");
     }
