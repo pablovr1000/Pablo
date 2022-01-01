@@ -1,0 +1,15 @@
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\bin\Debug\net6.0\03-ByteBank.exe
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\bin\Debug\net6.0\03-ByteBank.deps.json
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\bin\Debug\net6.0\03-ByteBank.runtimeconfig.json
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\bin\Debug\net6.0\03-ByteBank.dll
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\bin\Debug\net6.0\ref\03-ByteBank.dll
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\bin\Debug\net6.0\03-ByteBank.pdb
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\obj\Debug\net6.0\03-ByteBank.csproj.AssemblyReference.cache
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\obj\Debug\net6.0\03-ByteBank.GeneratedMSBuildEditorConfig.editorconfig
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\obj\Debug\net6.0\03-ByteBank.AssemblyInfoInputs.cache
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\obj\Debug\net6.0\03-ByteBank.AssemblyInfo.cs
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\obj\Debug\net6.0\03-ByteBank.csproj.CoreCompileInputs.cache
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\obj\Debug\net6.0\03-ByteBank.dll
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\obj\Debug\net6.0\ref\03-ByteBank.dll
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\obj\Debug\net6.0\03-ByteBank.pdb
+F:\Pablo\AprendendoCSharp\ByteBank\03-ByteBank\obj\Debug\net6.0\03-ByteBank.genruntimeconfig.cache
