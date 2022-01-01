@@ -5,7 +5,67 @@
       "ProjectGuid": "16aaa5b2-ff17-4d29-b60f-d452ca5a424d",
       "DisplayName": "1-AprendendoCSharp",
       "ColorIndex": 0
+    },
+    "b85bcbf2-a12d-4b13-8730-9f155ef16da8": {
+      "ProjectGuid": "b85bcbf2-a12d-4b13-8730-9f155ef16da8",
+      "DisplayName": "2-CriandoVariáveis",
+      "ColorIndex": 1
+    },
+    "19c0f2fe-3dc8-4f15-a329-287f33affa3b": {
+      "ProjectGuid": "19c0f2fe-3dc8-4f15-a329-287f33affa3b",
+      "DisplayName": "3-CriandoVariáveisDouble",
+      "ColorIndex": 2
+    },
+    "5d563710-1db5-4a0d-8859-875a4faa8b78": {
+      "ProjectGuid": "5d563710-1db5-4a0d-8859-875a4faa8b78",
+      "DisplayName": "4-ConversãoEOutrosTiposNuméricos",
+      "ColorIndex": 3
+    },
+    "42b26ecb-4de6-4231-82c0-afe852c4998f": {
+      "ProjectGuid": "42b26ecb-4de6-4231-82c0-afe852c4998f",
+      "DisplayName": "5-CaracteresETexto",
+      "ColorIndex": 4
+    },
+    "e3eb4de2-ca8e-429e-a9a6-9f98a447fc56": {
+      "ProjectGuid": "e3eb4de2-ca8e-429e-a9a6-9f98a447fc56",
+      "DisplayName": "6-AtribuicoesDeVariaveis",
+      "ColorIndex": 5
+    },
+    "4e3e97a5-7c8e-4e5a-8521-18139b6472b3": {
+      "ProjectGuid": "4e3e97a5-7c8e-4e5a-8521-18139b6472b3",
+      "DisplayName": "7-Condicionais",
+      "ColorIndex": 6
+    },
+    "6c79e89d-6e96-43fb-aace-7365e3133305": {
+      "ProjectGuid": "6c79e89d-6e96-43fb-aace-7365e3133305",
+      "DisplayName": "8-CondicionaisParteDois",
+      "ColorIndex": 7
+    },
+    "adb83ab0-4e17-4956-9a9b-35e9f39b9763": {
+      "ProjectGuid": "adb83ab0-4e17-4956-9a9b-35e9f39b9763",
+      "DisplayName": "9-Escopo",
+      "ColorIndex": 8
+    },
+    "151d80ae-db73-4478-9ff6-902904114e9f": {
+      "ProjectGuid": "151d80ae-db73-4478-9ff6-902904114e9f",
+      "DisplayName": "P10-CalculoPoupanca",
+      "ColorIndex": 9
+    },
+    "420170ef-fcf2-4e86-9bb3-5ad56dd89dec": {
+      "ProjectGuid": "420170ef-fcf2-4e86-9bb3-5ad56dd89dec",
+      "DisplayName": "P11-CalculoInvestimento",
+      "ColorIndex": 10
+    },
+    "7cf75115-5102-4a0d-b1b4-b7197d599f66": {
+      "ProjectGuid": "7cf75115-5102-4a0d-b1b4-b7197d599f66",
+      "DisplayName": "P12-CalculoInvestimentoLongoPrazo",
+      "ColorIndex": 11
+    },
+    "d4a561b1-f0fa-460a-b913-3ec20165de16": {
+      "ProjectGuid": "d4a561b1-f0fa-460a-b913-3ec20165de16",
+      "DisplayName": "P13-ForEncadeado",
+      "ColorIndex": 12
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 13
 }
