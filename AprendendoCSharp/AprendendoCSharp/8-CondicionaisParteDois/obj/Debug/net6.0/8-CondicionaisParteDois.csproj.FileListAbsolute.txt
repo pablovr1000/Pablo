@@ -1,0 +1,14 @@
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\bin\Debug\net6.0\8-CondicionaisParteDois.exe
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\bin\Debug\net6.0\8-CondicionaisParteDois.deps.json
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\bin\Debug\net6.0\8-CondicionaisParteDois.runtimeconfig.json
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\bin\Debug\net6.0\8-CondicionaisParteDois.dll
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\bin\Debug\net6.0\ref\8-CondicionaisParteDois.dll
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\bin\Debug\net6.0\8-CondicionaisParteDois.pdb
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\obj\Debug\net6.0\8-CondicionaisParteDois.GeneratedMSBuildEditorConfig.editorconfig
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\obj\Debug\net6.0\8-CondicionaisParteDois.AssemblyInfoInputs.cache
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\obj\Debug\net6.0\8-CondicionaisParteDois.AssemblyInfo.cs
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\obj\Debug\net6.0\8-CondicionaisParteDois.csproj.CoreCompileInputs.cache
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\obj\Debug\net6.0\8-CondicionaisParteDois.dll
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\obj\Debug\net6.0\ref\8-CondicionaisParteDois.dll
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\obj\Debug\net6.0\8-CondicionaisParteDois.pdb
+F:\Pablo\AprendendoCSharp\AprendendoCSharp\8-CondicionaisParteDois\obj\Debug\net6.0\8-CondicionaisParteDois.genruntimeconfig.cache
